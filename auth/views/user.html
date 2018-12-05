@@ -1,0 +1,38 @@
+<!doctype html>
+<html ng-app="myApp">
+    
+<head>
+    <title>User Login and Sessions</title>
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+</head>
+<header>
+    User Profile
+</header> 
+<body>  
+    <div class="form-container" ng-controller="myController">
+        <form method="POST" action="/user/update">
+            <label>Username:</label>
+            <input type="text" id="username" name="username" ng-model="user.username" disabled><br><br>
+            <label>Email:</label>
+            <input type="email" id="email" name="email" ng-model="user.email"><br><br>          
+            <label>Favorite Color:</label>
+            <input type="text" id="color" name="color" ng-model="user.color"><br><br>   
+            <input type="submit" id="save" value="Save">
+        </form>
+    </div>
+    <br>
+    <form method="POST" action="/user/delete">
+        <input type="submit" id="delete" value="Delete User">
+    </form>
+    <br>
+    <hr><br>
+    <span id="userMsg">
+    <%= msg %>
+    </span>
+    <script src="http://code.angularjs.org/1.2.9/angular.min.js"></script>
+    <script src="/javascripts/my_app.js"></script>
+    <a id="homeLink" href="/">Home</a>
+</body>
+
+</html>

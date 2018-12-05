@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+    
+<head>
+    <title>User Login and Sessions</title>
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+</head>
+<header>Login</header>
+<br><hr><br>
+<body>  
+    <div class="form-container">
+        <form method="POST" action="/login">
+            <label>Username:</label>
+            <input type="text" id="username" name="username"><br><br>
+            <label>Password:</label>
+            <input type="password" id="password" name="password"><br><br>
+            <input type="submit" id="login" value="Login">
+        </form>
+    </div><br><br>
+    <a id="signUpLink" href="/signup">Sign Up</a><br><br>
+    <hr>
+    <span id="loginMsg">
+    <%= msg %>
+    </span>
+</body>
+        
+</html>
